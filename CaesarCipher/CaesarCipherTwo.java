@@ -1,4 +1,4 @@
-package CaesarCipher;
+package DukeSpecialization_Course03.CaesarCipher;
 
  
 import edu.duke.*;
