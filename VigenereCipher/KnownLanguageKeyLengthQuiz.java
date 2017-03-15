@@ -7,7 +7,7 @@ public class KnownLanguageKeyLengthQuiz {
 	public static void main(String[] args) {
 		// Quiz 1
 		VigenereBreaker v = new VigenereBreaker();
-		FileResource fr = new FileResource("./src/assignment/week4/messages/secretmessage1.txt");
+		FileResource fr = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/secretmessage1.txt");
 		String message = fr.asString();
 		int [] key = v.tryKeyLength(message, 4, 'e');
 		for (Integer i: key) {
