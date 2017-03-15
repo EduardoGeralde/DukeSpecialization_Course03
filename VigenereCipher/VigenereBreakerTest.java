@@ -53,9 +53,10 @@ public class VigenereBreakerTest {
 	
 	@Test
 	public void tryKeyLengthTest() {
-		FileResource fr = new FileResource("./VigenereTestData/athens_keyflute.txt");
+		FileResource fr = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/secretmessage1.txt");
 		String message = fr.asString();
-		int [] key = v.tryKeyLength(message, 5, 'e');
+		int [] key = v.tryKeyLength(message, 4, 'e');
+		System.out.println(key.toString());
 		assertArrayEquals(new int[]{5, 11, 20, 19, 4}, key);
 	}
 	
@@ -73,9 +74,9 @@ public class VigenereBreakerTest {
 	
 	@Test
 	public void breakForLanguageTest() {
-		FileResource fr = new FileResource("./VigenereTestData/athens_keyflute.txt");
+		FileResource fr = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/secretmessage1.txt");
 		String message = fr.asString();
-		FileResource fr2 = new FileResource("./src/assignment/week4/dictionaries/English");
+		FileResource fr2 = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/dictionaries/English");
 		HashSet<String> dictionary = v.readDictionary(fr2);
 		String decrypt = v.breakForLanguage(message, dictionary);
 		String[] lines = decrypt.split("\\r?\\n");
@@ -98,7 +99,7 @@ public class VigenereBreakerTest {
 	
 	@Test
 	public void mostCommonCharInTest() {
-		FileResource fr = new FileResource("./src/assignment/week4/dictionaries/English");
+		FileResource fr = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/dictionaries/English");
         HashSet<String> result = new HashSet<String>();
         for (String line: fr.lines()) {
             line = line.toLowerCase();
