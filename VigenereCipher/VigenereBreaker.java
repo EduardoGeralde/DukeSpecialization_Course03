@@ -31,7 +31,7 @@ public class VigenereBreaker {
     public void breakVigenere () {
     	FileResource fr = new FileResource();
     	String message = fr.asString();
-    	int [] key = tryKeyLength(message, 5, 'e');
+    	int [] key = tryKeyLength(message, 4, 'e');
     	VigenereCipher vc = new VigenereCipher(key);
     	String decrypt = vc.decrypt(message);
     	System.out.println(decrypt);
@@ -50,10 +50,11 @@ public class VigenereBreaker {
     //The method returns the integer count of how many valid words in dictionary it found from message
     public int countWords(String message, HashSet<String> dictionary){
     	int count = 0;
-    	for (String word: message.split("\\W+")) {
+    	for (String word: message.split("\\W+")) { //Divides between "non-word" characters
     		word = word.toLowerCase();
-    		 if (dictionary.contains(word))
+    		if (dictionary.contains(word)){
     			 count++;
+            }
     	}
     	return count;
     }
@@ -79,9 +80,9 @@ public class VigenereBreaker {
         }
     	
     	int truekey = index + 1;
-        //int[] key = tryKeyLength(encrypted, truekey, 'e'); // for English
+        int[] key = tryKeyLength(encrypted, truekey, 'e'); // for English
     	char mostCommonChar = mostCommonCharIn(dictionary).charAt(0);
-    	int[] key = tryKeyLength(encrypted, truekey, mostCommonChar);
+    	//int[] key = tryKeyLength(encrypted, truekey, mostCommonChar);
         System.out.print("The keys are ");
         for (int i = 0; i < key.length; i++) {
              System.out.print(key[i] + " ");
@@ -91,13 +92,15 @@ public class VigenereBreaker {
         return vc.decrypt(encrypted);
     }
     
+    
     public void breakVigenere2 () {
     	FileResource fr = new FileResource();
     	String message = fr.asString();
-    	FileResource fr2 = new FileResource("./src/assignment/week4/dictionaries/English");
+    	FileResource fr2 = new FileResource("/Users/Eduardo/Desktop/Courses/Duke/JavaCourse03/data_Vigenere/dictionaries/German");
     	HashSet<String> dictionary = readDictionary(fr2);
     	String decrypt = breakForLanguage(message, dictionary);
     	System.out.println(decrypt);
+    	System.out.println(decrypt.length());
     }
     
     //The method finds out which character, of the letters in the English alphabet, appears most often in the
@@ -169,7 +172,7 @@ public class VigenereBreaker {
             //System.out.println("Finished reading "+f.getName());
     	}
     	HashMap<String, String> decrypted = breakForAllLanguages(message, languages);
-        //System.out.println(decrypted.get("English"));
+        System.out.println(decrypted.get("English"));
     }
     
 }
