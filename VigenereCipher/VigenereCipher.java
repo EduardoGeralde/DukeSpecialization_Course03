@@ -1,4 +1,4 @@
-package DukeSpecializationCourse03;
+package DukeSpecialization_Course03.VigenereCipher;
 
 import edu.duke.*;
 import java.util.*;
