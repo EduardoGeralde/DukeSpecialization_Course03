@@ -21,6 +21,11 @@ import org.junit.Test;
 
 import edu.duke.FileResource;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class VigenereBreakerTest {
 	private VigenereBreaker v;
 
