@@ -7,6 +7,11 @@ import java.util.HashSet;
 import edu.duke.DirectoryResource;
 import edu.duke.FileResource;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class BreakingtheVigenereCipherQuiz {
 	public static void main(String[] args) {
 		// Quiz 1: French
