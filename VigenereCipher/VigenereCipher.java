@@ -3,6 +3,11 @@ package DukeSpecialization_Course03.VigenereCipher;
 import edu.duke.*;
 import java.util.*;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class VigenereCipher {
     CaesarCipher[] ciphers;
     
