@@ -3,6 +3,11 @@ package DukeSpecialization_Course03.VigenereCipher;
 
 import edu.duke.FileResource;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class KnownLanguageKeyLengthQuiz {
 	public static void main(String[] args) {
 		// Quiz 1
