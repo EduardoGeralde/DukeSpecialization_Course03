@@ -4,6 +4,11 @@ import java.util.*;
 import java.io.File;
 import edu.duke.*;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class VigenereBreaker {
 	
 	//The method returns a String consisting of every totalSlices-th character from message, starting at the 
