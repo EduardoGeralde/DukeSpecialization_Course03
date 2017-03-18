@@ -5,6 +5,11 @@ import java.util.HashSet;
 
 import edu.duke.FileResource;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class UnknownKeyLengthQuiz {
 	public static void main(String[] args) {
 		// Quiz 1
