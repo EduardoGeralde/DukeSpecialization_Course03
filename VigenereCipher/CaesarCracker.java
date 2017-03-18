@@ -4,6 +4,11 @@ package DukeSpecialization_Course03.VigenereCipher;
 
 import edu.duke.*;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
 public class CaesarCracker {
     char mostCommon;
     
