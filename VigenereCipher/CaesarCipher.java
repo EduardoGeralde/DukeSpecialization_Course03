@@ -4,6 +4,12 @@ package DukeSpecialization_Course03.VigenereCipher;
 
 import edu.duke.*;
 
+/**
+ * 
+ * @author Eduardo Geralde Neto
+ * 
+ */
+
 public class CaesarCipher {
     private String alphabet;
     private String shiftedAlphabet;
